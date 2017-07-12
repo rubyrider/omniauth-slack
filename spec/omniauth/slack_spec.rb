@@ -19,6 +19,11 @@ RSpec.describe OmniAuth::Slack do
   end
 
   it 'should return callback url' do
-    expect(strategy).to be_nil
+    expect(strategy).to be_an_instance_of(OmniAuth::Strategies::Slack)
+  end
+
+  it 'should have valid oauth token' do
+    expect(strategy.client.options[:token_url]).to be == 'api/oauth.access'
+    expect(strategy.client.token_url).to be == 'https://api.slack.com/api/oauth.access'
   end
 end

@@ -1,6 +1,6 @@
 require 'omniauth/strategies/oauth2'
 
-module OmnioAuth
+module OmniAuth
   module Strategies
     class Slack < OmniAuth::Strategies::OAuth2
       NoAuthorizationCodeError = Class.new(StandardError)

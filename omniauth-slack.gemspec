@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
     f.match(%r{^(test|spec|features)/})
   end
 
-  spec.require_paths = ['lib', 'lib/slack', 'lib/strategies']
+  spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'omniauth-oauth2', '~> 1.2'
 
