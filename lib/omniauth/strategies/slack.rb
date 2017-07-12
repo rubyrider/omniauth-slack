@@ -9,7 +9,7 @@ module OmniAuth
 
       option :name, 'slack'
 
-      options :scope, ''
+      option :scope, 'users.identity'
 
       option :client_options, {
         site:          'https://api.slack.com/',
