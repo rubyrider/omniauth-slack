@@ -9,6 +9,8 @@ module OmniAuth
 
       option :name, 'slack'
 
+      options :scope, ''
+
       option :client_options, {
         site:          'https://api.slack.com/',
         authorize_url: 'https://slack.com/oauth/authorize',
@@ -16,6 +18,10 @@ module OmniAuth
       }
 
       option :authorize_options, [:scope]
+
+      def raw_info
+        @raw_info = MultiJson.decode(access_token.get('api/users.identity').body)
+      end
     end
   end
 end
