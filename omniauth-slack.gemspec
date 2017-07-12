@@ -5,18 +5,18 @@ require 'omniauth/slack/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'omniauth-slack'
-  spec.version       = Omniauth::Slack::VERSION
+  spec.version       = OmniAuth::Slack::VERSION
   spec.authors       = ['Irfan Ahmed']
   spec.email         = ['irfandhk@gmail.com']
 
   spec.summary       = %q{Slack OAuth2 Strategy for OmniAuth}
-  spec.homepage      = "https://github.com/rubyrider/omniauth-slack"
+  spec.homepage      = 'https://github.com/rubyrider/omniauth-slack'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
 
-  spec.require_paths = ["lib"]
+  spec.require_paths = ['lib', 'lib/slack', 'lib/strategies']
 
   spec.add_runtime_dependency 'omniauth-oauth2', '~> 1.2'
 
